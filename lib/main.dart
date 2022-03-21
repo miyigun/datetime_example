@@ -2,13 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:intl/intl.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(const MyApp());
+
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
 
   @override
   Widget build(BuildContext context) {
@@ -86,10 +84,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   onPressed: (){
 
-                    var date_time = DateFormat('dd/MM/yyyy HH:MM:ss').format(dateTime);
+                    var todaysDateTime = DateFormat('dd/MM/yyyy HH:MM:ss').format(dateTime);
 
                     Fluttertoast.showToast(
-                        msg: date_time,
+                        msg: todaysDateTime,
                         toastLength: Toast.LENGTH_SHORT,
                         gravity: ToastGravity.BOTTOM,
                         timeInSecForIosWeb: 1,
